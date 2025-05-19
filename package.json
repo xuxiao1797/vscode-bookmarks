@@ -2,7 +2,7 @@
   "name": "Bookmarks-Memo",
   "displayName": "Bookmarks-Memo",
   "description": "",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.100.2"
   },
