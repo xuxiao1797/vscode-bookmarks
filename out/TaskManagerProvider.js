@@ -45,8 +45,8 @@ class TaskManagerProvider {
             enableScripts: true,
             localResourceRoots: [this.context.extensionUri],
         };
-        const styleUri = webviewView.webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "src/index", "style.css"));
-        const scriptUri = webviewView.webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "src/index", "app.js"));
+        const styleUri = webviewView.webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "assets", "style.css"));
+        const scriptUri = webviewView.webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "assets", "app.js"));
         webviewView.webview.html = getWebviewContent(styleUri, scriptUri);
         // 处理Webview消息
         webviewView.webview.onDidReceiveMessage(async (message) => {

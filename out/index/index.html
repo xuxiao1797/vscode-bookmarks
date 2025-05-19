@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <button class="tab active" data-target="#list">书签</button>
+        <button class="tab" data-target="#todo">待办事项</button>
+      </div>
+
+      <div id="list" class="tab-content active">
+        <div class="header">
+          <input
+            type="text"
+            id="listSearchInput"
+            placeholder="搜索列表项目"
+            oninput="ListManager.search(this.value)"
+          />
+          <input type="text" id="listItemInput" placeholder="输入新项目" />
+          <button onclick="ListManager.addItem()">添加</button>
+        </div>
+        <ul class="items-container" id="listContainer"></ul>
+      </div>
+
+      <div id="todo" class="tab-content">
+        <div class="header">
+          <input type="text" id="todoItemInput" placeholder="输入待办事项" />
+          <button onclick="TodoManager.addItem()">添加</button>
+        </div>
+        <ul class="items-container" id="todoContainer"></ul>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

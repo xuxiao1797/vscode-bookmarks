@@ -11,10 +11,10 @@ export class TaskManagerProvider implements vscode.WebviewViewProvider {
     };
 
     const styleUri = webviewView.webview.asWebviewUri(
-      vscode.Uri.joinPath(this.context.extensionUri, "src/index", "style.css")
+      vscode.Uri.joinPath(this.context.extensionUri, "assets", "style.css")
     );
     const scriptUri = webviewView.webview.asWebviewUri(
-      vscode.Uri.joinPath(this.context.extensionUri, "src/index", "app.js")
+      vscode.Uri.joinPath(this.context.extensionUri, "assets", "app.js")
     );
 
     webviewView.webview.html = getWebviewContent(styleUri, scriptUri);
